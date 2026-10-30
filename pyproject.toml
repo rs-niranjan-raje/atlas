@@ -1,0 +1,32 @@
+[project]
+name = "atlas"
+version = "0.1.0"
+description = "Atlas: a small team assistant, built module by module in the Agentic AI Developer Program"
+readme = "README.md"
+authors = [
+    { name = "Niranjan.Raje", email = "niranjan.raje@randstadrisesmart.com" }
+]
+requires-python = ">=3.12"
+dependencies = []
+
+[project.scripts]
+atlas = "atlas:main"
+
+[build-system]
+requires = ["uv_build>=0.13.6,<0.14.0"]
+build-backend = "uv_build"
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.2.0",
+    "pytest-cov>=7.1.0",
+]
