@@ -6,9 +6,19 @@ helped or got things wrong.
 ## Module 0: Setup
 
 - **Built:**
+  - The Atlas repo, pushed to GitHub (first commit `5d17262`), with Python 3.12 managed by uv.
+  - `scripts/check_gemini.py`: checks the Gemini key works without printing it.
+  - Ran the `deep-search` sample from `D:\adk-samples` in `adk web`. It stands in for the missing "team's agent project".
 - **Broke:**
+  - uv failed with a certificate error on the company network. `UV_SYSTEM_CERTS=1` fixed it.
+  - Full deep-search runs hit a 429 quota error on the free-tier key.
+  - The sample forced Google Cloud login. I patched `app/__init__.py` in the sample clone (not in Atlas) to use the API key.
 - **Learned:**
-- **AI assistant:**
+  - Two meanings of "model": the AI model (Gemini) vs a data model (Pydantic class).
+  - An agent = model + instructions + tools.
+  - Tool calling: the model only asks for the call. Our code validates and runs it.
+  - The key lives in `.env`, which is git-ignored, and is never printed or committed.
+- **AI assistant:** no mistakes logged for this module.
 
 ## Module 1: Python essentials
 

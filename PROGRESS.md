@@ -7,7 +7,7 @@ Last updated: 2026-11-20.
 
 | Module | Topic | Status |
 |---|---|---|
-| 0 | Setup | Mostly done (see leftovers) |
+| 0 | Setup | Done except the tag |
 | 1 | Python essentials | Done except the tag |
 | 2-11 | LLM basics, first agent, RAG, multi-agent, MCP/A2A, human-in-the-loop, guardrails, responsible AI, deployment, capstone | Not started |
 
@@ -28,11 +28,11 @@ Local changes made to the sample clone only (not in Atlas):
 - `app/.env`: key added, `MODEL_NAME=gemini-3.5-flash-lite`.
 
 Leftovers:
-- [ ] Draw the deep-search main flow myself (agents: planner -> searcher -> critic loop -> writer).
-- [ ] Find a learning buddy.
-- [ ] Write the Module 0 entry in `LEARNING_LOG.md`.
+- [x] Find a learning buddy.
+- [x] Write the Module 0 entry in `LEARNING_LOG.md`.
+- [x] Update the tracker spreadsheet.
 - [ ] Tag `module-0-done`.
-- [ ] Update the tracker spreadsheet.
+- Skipped: "draw the deep-search flow" (decided not to do it).
 - Skipped: "team's agent project" step (no such project exists).
 
 ## Module 1: Python essentials
