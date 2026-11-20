@@ -4,10 +4,14 @@ version = "0.1.0"
 description = "Atlas: a small team assistant, built module by module in the Agentic AI Developer Program"
 readme = "README.md"
 authors = [
-    { name = "Niranjan.Raje", email = "niranjan.raje@randstadrisesmart.com" }
+    { name = "Niranjan.Raje" }
 ]
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "google-genai>=2.34.0",
+    "pydantic>=2.14.2",
+    "python-dotenv>=1.2.4",
+]
 
 [project.scripts]
 atlas = "atlas:main"
