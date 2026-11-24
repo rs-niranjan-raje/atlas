@@ -1,18 +1,8 @@
 """A search request that Atlas sends to a search tool."""
 
-from typing import Annotated
+from pydantic import BaseModel, Field
 
-from pydantic import AfterValidator, BaseModel, Field
-
-
-def not_blank(value: str) -> str:
-    """Check if the string is empty or only whitespace."""
-    if not value.strip():
-        raise ValueError("String cannot be empty or only whitespace.")
-    return value
-
-
-NotBlankStr = Annotated[str, AfterValidator(not_blank)]
+from atlas.schemas.common import NotBlankStr
 
 
 class SearchQuery(BaseModel):
